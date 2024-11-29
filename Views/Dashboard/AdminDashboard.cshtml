@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewBag.Title = "Admin Dashboard";
+    ViewBag.DashboardTitle = "Welcome to the Admin Dashboard";
+}
+
+<div>
+    <h3>Hello, @Session["Username"]!</h3>
+    <p>Welcome to your dashboard. Here are some actions you can perform:</p>
+    <ul>
+        <li><a href="@Url.Action("ManageUsers", "Dashboard")">Manage Users</a></li>
+        <li><a href="@Url.Action("ViewReports", "Dashboard")">View Reports</a></li>
+    </ul>
+</div>

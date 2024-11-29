@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewBag.Title = "Faculty Dashboard";
+    ViewBag.DashboardTitle = "Welcome, Faculty";
+}
+
+<div>
+    <h3>Hello, @Session["Username"]!</h3>
+    <p>This is your faculty dashboard. Here you can manage your classes, view schedules, and perform other tasks.</p>
+
+    <!-- Add additional faculty-specific functionality here -->
+    <ul>
+        <li><a href="@Url.Action("ManageClasses", "Faculty")">Manage Classes</a></li>
+        <li><a href="@Url.Action("ViewSchedule", "Faculty")">View Schedule</a></li>
+    </ul>
+</div>

@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewBag.Title = "Student Dashboard";
+    ViewBag.DashboardTitle = "Welcome to the Student Dashboard";
+}
+
+<div>
+    <h3>Hello, @Session["Username"]!</h3>
+    <p>Welcome to your dashboard. Here are some actions you can perform:</p>
+    <ul>
+        <li><a href="@Url.Action("ViewCourses", "Dashboard")">View Courses</a></li>
+        <li><a href="@Url.Action("SubmitAssignments", "Dashboard")">Submit Assignments</a></li>
+    </ul>
+</div>
